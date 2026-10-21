@@ -469,7 +469,7 @@
     clearTimeout(idleTimer);
     idleTimer = setTimeout(() => {
       const quiet = performance.now() - idleSince > 5000;   // 剛回完話的表情先留一下
-      if (state === "idle" && quiet && !showing && !actTl && inView && document.visibilityState === "visible" && hasGsap && !reduce) {
+      if (state === "idle" && quiet && !showing && !actTl && (inView || (window.AI3Dock && window.AI3Dock.docked)) && document.visibilityState === "visible" && hasGsap && !reduce) {
         if (Math.random() < 0.32) {
           const e = pickFrom(IDLE_EMOS); setEmotion(e);
           clearTimeout(emoBack); emoBack = setTimeout(() => { if (state === "idle" && emotion === e && !showing) setEmotion("happy"); }, 2600 + Math.random() * 1800);

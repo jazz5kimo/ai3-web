@@ -1310,3 +1310,77 @@ h3, .plans h3 { word-break: keep-all; overflow-wrap: anywhere; }
   .iso-map h3 { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .iso-arch::before { animation: none; } }
+
+/* ===== 右下角的小貴哥（首頁捲過 Hero 後、其他頁一進來） ===== */
+.gdock { position: fixed; right: 14px; bottom: 6px; z-index: 60; pointer-events: none; }
+.gdock__btn { pointer-events: auto; position: relative; display: block; width: 112px; height: 196px; padding: 0; border: 0; background: none; cursor: pointer;
+  opacity: 0; transform: translateY(24px); transition: opacity 0.45s, transform 0.6s var(--ease-out); -webkit-tap-highlight-color: transparent; }
+.gdock.is-on .gdock__btn { opacity: 1; transform: none; }
+.gdock--home .gdock__btn { opacity: 1; transform: none; transition: none; pointer-events: none; }
+.gdock--home.is-on .gdock__btn { pointer-events: auto; }
+.gdock__fig { position: absolute; left: 0; right: 0; bottom: 14px; display: block; transition: transform 0.45s var(--ease-out); }
+.gdock__btn:hover .gdock__fig, .gdock__btn:focus-visible .gdock__fig { transform: translateY(-5px); }
+.gdock .guige { position: relative; inset: auto; width: 100%; margin: 0; filter: drop-shadow(0 14px 14px rgba(2, 12, 60, 0.42)); }
+.gdock__disc { position: absolute; left: 50%; bottom: 2px; width: 118px; height: 30px; translate: -50% 0; border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(140, 210, 255, 0.75), rgba(23, 99, 255, 0.28) 55%, rgba(23, 99, 255, 0) 72%); opacity: 0; transition: opacity 0.5s; }
+.gdock.is-on .gdock__disc { opacity: 1; }
+.gdock__disc i { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid rgba(120, 200, 255, 0.7); animation: gdockPulse 2.8s var(--ease-out) infinite; }
+.gdock__disc i + i { animation-delay: 1.4s; }
+@keyframes gdockPulse { 0% { transform: scale(0.55); opacity: 0.9; } 100% { transform: scale(1.5); opacity: 0; } }
+.gdock__tip { position: absolute; left: 50%; top: -4px; translate: -50% 0; padding: 5px 11px; border-radius: 999px; background: var(--grad); color: #fff;
+  font-size: 12.5px; font-weight: 700; white-space: nowrap; box-shadow: 0 10px 24px -10px rgba(23, 99, 255, 0.9); opacity: 0; transform: translateY(6px); transition: opacity 0.3s, transform 0.4s var(--ease-out); pointer-events: none; }
+.gdock.is-on .gdock__btn:hover .gdock__tip, .gdock.is-on .gdock__btn:focus-visible .gdock__tip { opacity: 1; transform: none; }
+.gdock:not(.is-on) .gdock__tip, .gdock.is-open .gdock__tip { display: none; }
+
+/* 對話泡泡：說話時出現在貴哥左上方，安靜一陣子就收起 */
+.gdock .say { position: absolute; left: auto; top: auto; right: 112px; bottom: 128px; width: min(300px, calc(100vw - 150px)); translate: none; padding: 12px 14px 14px; border-radius: 18px;
+  transform-origin: 100% 100%; pointer-events: auto; box-shadow: 0 24px 50px -20px rgba(2, 12, 60, 0.7), 0 0 0 1px rgba(10, 40, 120, 0.06); }
+.gdock .say::after { left: auto; right: -11px; top: auto; bottom: 16px; width: 22px; height: 20px; translate: none; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.gdock .say__text { font-size: 15px; max-height: 6.6em; }
+.gdock .say__sound { padding: 5px 10px; font-size: 12px; }
+.gdock:not(.is-talking) .say, .gdock.is-open .say { opacity: 0; transform: translateY(10px) scale(0.94); pointer-events: none; }
+.gdock.is-talking:not(.is-open) .say { opacity: 1; transform: none; }
+
+/* 其他頁的小對話窗 */
+.gdock__panel { pointer-events: auto; position: absolute; right: 116px; bottom: 14px; width: min(370px, calc(100vw - 150px)); height: min(520px, calc(100vh - 110px));
+  display: flex; flex-direction: column; overflow: hidden; border-radius: 22px; background: #fff; color: var(--ink);
+  box-shadow: 0 40px 90px -30px rgba(2, 12, 60, 0.75), 0 0 0 1px rgba(10, 40, 120, 0.08);
+  opacity: 0; visibility: hidden; transform: translateY(16px) scale(0.96); transform-origin: 100% 100%; transition: opacity 0.3s, transform 0.45s var(--ease-out), visibility 0s 0.45s; }
+.gdock.is-open .gdock__panel { opacity: 1; visibility: visible; transform: none; transition: opacity 0.3s, transform 0.45s var(--ease-out), visibility 0s; }
+.gdock__head { display: flex; align-items: center; gap: 8px; padding: 14px 14px 14px 18px; background: var(--grad); color: #fff; }
+.gdock__head b { font-size: 16px; }
+.gdock__head small { font-size: 12.5px; opacity: 0.8; flex: 1; }
+.gdock__dot { width: 8px; height: 8px; border-radius: 50%; background: #5cf5a8; box-shadow: 0 0 0 4px rgba(92, 245, 168, 0.25); }
+.gdock__x { width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); color: #fff; font-size: 20px; line-height: 1; }
+.gdock__x:hover { background: rgba(255, 255, 255, 0.3); }
+.gdock__log { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding: 16px; background: linear-gradient(180deg, #f5f8ff, #fff); overscroll-behavior: contain; }
+.gdock__log .msg { font-size: 14.5px; }
+.gdock__chips { display: flex; gap: 8px; padding: 10px 14px 4px; overflow-x: auto; scrollbar-width: none; }
+.gdock__chips::-webkit-scrollbar { display: none; }
+.gdock__chips .chip { flex: 0 0 auto; padding: 6px 12px; font-size: 13px; }
+.gdock__bar { display: flex; align-items: center; gap: 8px; padding: 10px 12px 12px; }
+.gdock__bar input { flex: 1; min-width: 0; height: 42px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-strong); font: inherit; font-size: 15px; color: var(--ink); background: #fff; outline: none; }
+.gdock__bar input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(23, 99, 255, 0.15); }
+.gdock__mic, .gdock__send { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; }
+.gdock__mic { background: var(--grad); color: #fff; box-shadow: 0 10px 22px -10px rgba(23, 99, 255, 0.9); }
+.gdock__mic[data-active="true"] { background: #ff4d6d; animation: gdockMic 1.2s infinite; }
+@keyframes gdockMic { 50% { box-shadow: 0 0 0 8px rgba(255, 77, 109, 0.2); } }
+.gdock__send { background: var(--bg-2); color: var(--blue-deep); }
+.gdock__mic svg, .gdock__send svg { width: 20px; height: 20px; }
+.gdock__hint { margin: -4px 16px 10px; font-size: 12.5px; color: var(--muted); }
+
+/* 回頂部按鈕讓位給貴哥 */
+body.has-gdock .totop { right: 132px; }
+
+@media (max-width: 699px) {
+  .gdock { right: 6px; bottom: 4px; }
+  .gdock__btn { width: 76px; height: 136px; }
+  .gdock__fig { bottom: 10px; }
+  .gdock__disc { width: 84px; height: 22px; }
+  .gdock .say { right: 70px; bottom: 92px; width: min(250px, calc(100vw - 96px)); padding: 10px 12px 12px; }
+  .gdock .say__text { font-size: 14px; max-height: 6.4em; }
+  .gdock__panel { position: fixed; left: 8px; right: 8px; bottom: 142px; width: auto; height: min(62vh, 480px); border-radius: 20px; }
+  body.has-gdock .totop { right: 88px; }
+}
+@media (prefers-reduced-motion: reduce) { .gdock__disc i { animation: none; opacity: 0; } }
+@media print { .gdock { display: none; } }

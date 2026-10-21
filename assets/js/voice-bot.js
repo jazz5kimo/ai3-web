@@ -487,7 +487,8 @@
   function chatterLoop() {
     setTimeout(async () => {
       const calm = Date.now() - lastUser > 30000;
-      if (calm && stageSeen && !busy() && document.visibilityState === "visible" && chatterN < 8) {
+      const docked = window.AI3Dock && window.AI3Dock.docked;   // 縮到右下角時也算看得到
+      if (calm && (stageSeen || docked) && !busy() && document.visibilityState === "visible" && chatterN < (cfg.chatterMax || 8)) {
         chatterIdx = (chatterIdx + 1) % CHATTER.length; chatterN++;
         scriptOn = true; await runScript([CHATTER[chatterIdx]]); scriptOn = false;
       }
@@ -495,7 +496,7 @@
     }, 16000 + Math.random() * 12000);
   }
   let started = false;
-  const startShow = () => { if (started) return; started = true; setTimeout(async () => { if (scriptOn) await runScript(GREET); scriptOn = false; chatterLoop(); }, 500); };
+  const startShow = () => { if (started) return; started = true; setTimeout(async () => { if (scriptOn) await runScript(GREET); scriptOn = false; chatterLoop(); }, cfg.greetDelay || 500); };
   window.addEventListener("ai3:intro", startShow);
   setTimeout(startShow, 4500);   // 保險：開場動畫沒觸發也會開口
   setTimeout(() => addMsg("bot", cfg.greeting || "你好，有什麼想問 Ai3 的？"), 1400);
