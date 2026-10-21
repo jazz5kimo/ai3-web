@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QbiAI 企業客服機器人｜Ai3 人工智能</title>
+<meta name="description" content="QbiAI 整合語音辨識、意圖理解、多輪對話與企業知識庫，24 小時回答客戶，接得上網頁、LINE 與電話。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="../index.html" aria-label="Ai3 人工智能 首頁"><img src="../assets/img/Ai3-co-cropped-logo_b06e9a.png" alt="Ai3 人工智能" width="107" height="40" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo__fallback',textContent:'Ai3'}))"></a>
+    <nav class="nav" id="nav" aria-label="主選單"><div class="nav__item"><a class="nav__link" href="../products/index.html" aria-haspopup="true">產品 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu nav__menu--wide"><div class="nav__grid"><a href="../products/qbiai.html"><strong>QbiAI 企業客服機器人</strong><span>文字＋語音，24 小時回答客戶</span></a><a href="../products/qbi-bot.html"><strong>Qbi Bot 智能機器人</strong><span>選單式與語意式問答</span></a><a href="../products/qbi-crm.html"><strong>Qbi CRM 智能客服系統</strong><span>全通路客戶資料與客服流程</span></a><a href="../products/cloud.html"><strong>雲端訂閱方案</strong><span>中小企業快速開通</span></a><a href="../products/custom.html"><strong>客製化專案</strong><span>集團級整合與專屬顧問</span></a><a href="../products/course.html"><strong>AI 智慧應用課程</strong><span>政府補助最高 80%</span></a></div></div></div><div class="nav__item"><a class="nav__link" href="../solutions/index.html" aria-haspopup="true">解決方案 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu nav__menu--wide"><div class="nav__grid"><a href="../solutions/finance.html"><strong>金融保險</strong><span>帳務、卡務、理財與保單查詢自助化，法遵與異地…</span></a><a href="../solutions/public.html"><strong>公部門</strong><span>1999／1988 等民眾專線，真人與 AI…</span></a><a href="../solutions/transport.html"><strong>交通運輸</strong><span>航空、鐵路、捷運與票證，旅客問題在網頁、LI…</span></a><a href="../solutions/retail.html"><strong>零售、美妝與電商</strong><span>會員綁定、快閃優惠、訂單與物流狀態，用對話把…</span></a><a href="../solutions/tech.html"><strong>製造與科技</strong><span>售前諮詢、保固查詢、故障排除與維修追蹤，多語…</span></a><a href="../solutions/education.html"><strong>教育與其他</strong><span>校園導覽的實體互動機器人，以及公部門的社群防…</span></a></div></div></div><div class="nav__item"><a class="nav__link" href="../cases/index.html">成功案例</a></div><div class="nav__item"><a class="nav__link" href="../about/index.html" aria-haspopup="true">關於 Ai3 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu"><a href="../about/index.html"><strong>公司簡介</strong><span>2018 年成立，台北南港</span></a><a href="../about/team.html"><strong>經營團隊</strong><span>董事長與總經理</span></a><a href="../about/awards.html"><strong>獎項與認證</strong><span>WITSA、Gartner、ISO/IEC 42001</span></a><a href="../about/esg.html"><strong>ESG 永續報告</strong><span>2021 到 2025 年報告書</span></a><a href="../about/careers.html"><strong>人才招募</strong><span>加入 Ai3</span></a></div></div><div class="nav__item"><a class="nav__link" href="../insights/index.html" aria-haspopup="true">洞察 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu"><a href="../insights/news.html"><strong>最新消息</strong><span>公司動態與活動</span></a><a href="../insights/media.html"><strong>媒體報導</strong><span>經濟日報、工商時報、TVBS…</span></a><a href="../insights/articles.html"><strong>專欄文章</strong><span>AI 客服與數位轉型觀點</span></a></div></div><a class="btn btn--primary" href="../contact/index.html">聯絡我們</a></nav>
+    <a class="btn btn--primary header__cta" href="../contact/index.html">聯絡我們</a>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- 第三層：產品詳情 -->
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="路徑"><a href="../index.html">首頁</a><span><a href="index.html">產品</a></span><span>QbiAI 企業客服機器人</span></nav>
+    <h1>QbiAI 企業客服機器人</h1>
+    <p>把語音辨識、意圖理解、多輪對話與企業知識庫整合成一位 AI 服務專員。電話線不再忙線，客戶不再抱怨重複回答，客服團隊把時間留給真正需要人的案件。</p>
+    <div class="hero__actions" style="margin-top:28px">
+      <a class="btn btn--primary btn--lg" href="../index.html#top">回首頁跟它說話</a>
+      <a class="btn btn--ghost btn--lg" href="../index.html#contact">預約顧問</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>各司其職，完美支援。</h2>
+      <p>從前台到後台，QbiAI 補上的是那些重複、瑣碎、但客戶等不了的工作。</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature"><h3>自動回覆</h3><p>常見問題由 AI 先接手，減輕輪班負擔，回覆速度與滿意度同時提升。</p></div>
+      <div class="feature"><h3>快速諮詢</h3><p>產品推薦與申辦流程引導，客戶在對話裡就能走完前半段。</p></div>
+      <div class="feature"><h3>企業知識統整</h3><p>跨部門的問題一次回答，知識庫集中維護、定期更新。</p></div>
+      <div class="feature"><h3>多工處理</h3><p>整理內部紀錄、產出會議報告，讓同一套 AI 也服務內部同仁。</p></div>
+      <div class="feature"><h3>24 小時服務</h3><p>全天候接聽與回覆，減少重複說明的時間。</p></div>
+      <div class="feature"><h3>轉接真人</h3><p>需要人處理時，連同對話脈絡一起轉給客服，客戶不用重講。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>規格一覽</h2>
+      <p>以下為現行官網揭露的能力範圍，正式版頁面可再補上技術細節與整合文件。</p>
+    </div>
+    <table class="spec">
+      <tbody>
+        <tr><th>對話模式</th><td>文字、語音（語音辨識＋語音合成）</td></tr>
+        <tr><th>語言理解</th><td>意圖辨識、自然語言理解、多輪對話與上下文保留、跨領域問答</td></tr>
+        <tr><th>知識來源</th><td>企業問答知識庫；專案可串接企業內部系統</td></tr>
+        <tr><th>通路</th><td>網頁聊天、LINE、Meta 訊息、電話 CTI、Email、簡訊</td></tr>
+        <tr><th>資料與報表</th><td>完整互動紀錄、客戶行為分析，與 Qbi CRM 共用客戶資料</td></tr>
+        <tr><th>部署</th><td>雲端訂閱（Qbi Cloud）或專案客製部署</td></tr>
+        <tr><th>治理</th><td>Ai3 取得全台首張 ISO/IEC 42001 AI 管理系統認證</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>想看 QbiAI 接上你們的知識庫會怎麼回答？</h2>
+        <p>帶著十個常見問題來，顧問當場示範。</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <a class="btn btn--primary btn--lg" href="mailto:contactai3@ai3.cloud?subject=QbiAI 示範預約">預約示範</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--6">
+      <div class="footer__brand">
+        <a class="logo" href="../index.html"><img src="../assets/img/Ai3-co-cropped-logo_b06e9a.png" alt="Ai3 人工智能" width="107" height="40"></a>
+        <p>Ai3 人工智能股份有限公司。把語音、對話與知識整合成企業的 AI 服務專員。</p>
+        <div class="footer__contact"><span>115 台北市南港區重陽路 273 號 9 樓</span><a href="tel:+886277066101">02-7706-6101</a><a href="mailto:contactai3@ai3.cloud">contactai3@ai3.cloud</a><span>傳真 02-7706-6100</span></div>
+      </div>
+      <div><h4><a href="../products/index.html">產品</a></h4><ul><li><a href="../products/qbiai.html">QbiAI 企業客服機器人</a></li><li><a href="../products/qbi-bot.html">Qbi Bot 智能機器人</a></li><li><a href="../products/qbi-crm.html">Qbi CRM 智能客服系統</a></li><li><a href="../products/cloud.html">雲端訂閱方案</a></li><li><a href="../products/custom.html">客製化專案</a></li><li><a href="../products/course.html">AI 智慧應用課程</a></li></ul></div><div><h4><a href="../solutions/index.html">解決方案</a></h4><ul><li><a href="../solutions/finance.html">金融保險</a></li><li><a href="../solutions/public.html">公部門</a></li><li><a href="../solutions/transport.html">交通運輸</a></li><li><a href="../solutions/retail.html">零售、美妝與電商</a></li><li><a href="../solutions/tech.html">製造與科技</a></li><li><a href="../solutions/education.html">教育與其他</a></li></ul></div><div><h4><a href="../cases/index.html">成功案例</a></h4><ul><li><a href="../cases/index.html">所有案例</a></li></ul></div><div><h4><a href="../about/index.html">關於 Ai3</a></h4><ul><li><a href="../about/index.html">公司簡介</a></li><li><a href="../about/team.html">經營團隊</a></li><li><a href="../about/awards.html">獎項與認證</a></li><li><a href="../about/esg.html">ESG 永續報告</a></li><li><a href="../about/careers.html">人才招募</a></li></ul></div><div><h4><a href="../insights/index.html">洞察</a></h4><ul><li><a href="../insights/news.html">最新消息</a></li><li><a href="../insights/media.html">媒體報導</a></li><li><a href="../insights/articles.html">專欄文章</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 Ai3 人工智能股份有限公司</span><span><a href="../privacy.html">個資暨隱私權聲明</a> · <a href="../contact/index.html">聯絡我們</a> · <a href="https://www.104.com.tw/company/1a2x6bkz59" target="_blank" rel="noopener">104 職缺</a></span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/effects.js"></script>
+</body>
+</html>

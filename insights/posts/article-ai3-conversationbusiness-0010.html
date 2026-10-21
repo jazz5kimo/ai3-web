@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人工智慧一大迷思：聊天機器人真的可以自我學習嗎？｜Ai3 人工智能</title>
+<meta name="description" content="人工智能技術目前在科技業上應用廣泛,經常聽到人工智能機器人、人工智能手臂、人工智能家電 … 等,聊天機器人,真的有這麼「智能」可以自主學習嗎？還是只是「方便使用」？">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="../../index.html" aria-label="Ai3 人工智能 首頁"><img src="../../assets/img/Ai3-co-cropped-logo_b06e9a.png" alt="Ai3 人工智能" width="107" height="40" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo__fallback',textContent:'Ai3'}))"></a>
+    <nav class="nav" id="nav" aria-label="主選單"><div class="nav__item"><a class="nav__link" href="../../products/index.html" aria-haspopup="true">產品 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu nav__menu--wide"><div class="nav__grid"><a href="../../products/qbiai.html"><strong>QbiAI 企業客服機器人</strong><span>文字＋語音，24 小時回答客戶</span></a><a href="../../products/qbi-bot.html"><strong>Qbi Bot 智能機器人</strong><span>選單式與語意式問答</span></a><a href="../../products/qbi-crm.html"><strong>Qbi CRM 智能客服系統</strong><span>全通路客戶資料與客服流程</span></a><a href="../../products/cloud.html"><strong>雲端訂閱方案</strong><span>中小企業快速開通</span></a><a href="../../products/custom.html"><strong>客製化專案</strong><span>集團級整合與專屬顧問</span></a><a href="../../products/course.html"><strong>AI 智慧應用課程</strong><span>政府補助最高 80%</span></a></div></div></div><div class="nav__item"><a class="nav__link" href="../../solutions/index.html" aria-haspopup="true">解決方案 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu nav__menu--wide"><div class="nav__grid"><a href="../../solutions/finance.html"><strong>金融保險</strong><span>帳務、卡務、理財與保單查詢自助化，法遵與異地…</span></a><a href="../../solutions/public.html"><strong>公部門</strong><span>1999／1988 等民眾專線，真人與 AI…</span></a><a href="../../solutions/transport.html"><strong>交通運輸</strong><span>航空、鐵路、捷運與票證，旅客問題在網頁、LI…</span></a><a href="../../solutions/retail.html"><strong>零售、美妝與電商</strong><span>會員綁定、快閃優惠、訂單與物流狀態，用對話把…</span></a><a href="../../solutions/tech.html"><strong>製造與科技</strong><span>售前諮詢、保固查詢、故障排除與維修追蹤，多語…</span></a><a href="../../solutions/education.html"><strong>教育與其他</strong><span>校園導覽的實體互動機器人，以及公部門的社群防…</span></a></div></div></div><div class="nav__item"><a class="nav__link" href="../../cases/index.html">成功案例</a></div><div class="nav__item"><a class="nav__link" href="../../about/index.html" aria-haspopup="true">關於 Ai3 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu"><a href="../../about/index.html"><strong>公司簡介</strong><span>2018 年成立，台北南港</span></a><a href="../../about/team.html"><strong>經營團隊</strong><span>董事長與總經理</span></a><a href="../../about/awards.html"><strong>獎項與認證</strong><span>WITSA、Gartner、ISO/IEC 42001</span></a><a href="../../about/esg.html"><strong>ESG 永續報告</strong><span>2021 到 2025 年報告書</span></a><a href="../../about/careers.html"><strong>人才招募</strong><span>加入 Ai3</span></a></div></div><div class="nav__item"><a class="nav__link" href="../../insights/index.html" aria-haspopup="true">洞察 <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a><div class="nav__menu"><a href="../../insights/news.html"><strong>最新消息</strong><span>公司動態與活動</span></a><a href="../../insights/media.html"><strong>媒體報導</strong><span>經濟日報、工商時報、TVBS…</span></a><a href="../../insights/articles.html"><strong>專欄文章</strong><span>AI 客服與數位轉型觀點</span></a></div></div><a class="btn btn--primary" href="../../contact/index.html">聯絡我們</a></nav>
+    <a class="btn btn--primary header__cta" href="../../contact/index.html">聯絡我們</a>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="wrap page-hero__inner"><nav class="crumbs" aria-label="路徑"><a href="../../index.html">首頁</a><span><a href="../../insights/index.html">洞察</a></span><span><a href="../../insights/articles.html">專欄文章</a></span><span>人工智慧一大迷思：聊天機器人真的可以自我學習嗎？</span></nav><div><h1>人工智慧一大迷思：聊天機器人真的可以自我學習嗎？</h1></div></div></section>
+<article class="section section--tight"><div class="wrap post-wrap">
+  <div class="post-meta"><time class="en">2022.01.05</time><span class="pill">專欄文章</span></div>
+  <figure class="post-hero"><img src="../../assets/img/img__37a7b7.jpg" alt="" loading="lazy"></figure>
+  <div class="post-body">人工智慧一大迷思：聊天機器人真的可以自我學習嗎？ <img src="../../assets/img/img__f350a5.png" loading="lazy" alt="chatbot 聊天機器人"> <h2><strong>聊天機器人真的這麼「智能」嗎？</strong></h2> <p>給他幾個例子，他就可以像人一樣自主學習嗎？答案是可以的，但是！<strong>為什麼近期會這麼興起一個職務叫語意分析師或建構師呢？</strong></p> <p><a href="https://zh.wikipedia.org/wiki/%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA" target="_blank" rel="noopener">聊天機器人</a>的自主學習只要是應用多組深度學習模型去模擬人的口氣、對於語言解釋的判斷及適當的問題回覆適當的答案，那要怎麼學習？誰讓聊天機器人學習？就是語意分析師或建構師。</p> <p>可以想像一下，「人」的成長需要有大量的學習知識，其實智能機器人也會需要的，只是「人」的認知和「機器人」還是有區別的，人可以懂文字、文化、情感、人際關係、倫理道德、法規等複雜的理解能力，但機器人只看得懂0和1，要怎麼教他們懂文字及複雜的理解能力？這時候就需要請到語意分析師及建構師出馬了，因為他們懂怎麼在人與機器人間做溝通的橋樑。</p> <h2>聊天機器人跟學習有什麼關係？</h2> <p>説到這一定又有人會問，那<strong>智能機器人就不能餵養一次相關知識理解範圍後，就讓他們自主學習嗎？</strong></p> <p>這個問題沒有對錯，短期內確實可以讓他們自主學習一段時間，但就長期經營來說，還是需要有「導師」這樣的角色去替智能機器人解惑和導正。好比說「人」可不可以自主學習？可以，但是「人」在學習的過程中，一定會有疑問和學習分歧點，這時候能做的除了上網查資料之外，最好是還有一位「導師」協助做判斷和教學，人需要一位人生導師，所以機器人也是需要的。</p> <h2>智能機器人怎麼做學習？擔任語意分析師或建議師需要做什麼事情？</h2> <p>語意建構師擔任聊天機器人與人之間的溝通橋樑，最一開始我們會先做需求訪談確認之後，再進行聊天機器人塑造的動作，這隻聊天機器人會有以下幾個面向需確認：</p> <ol> <li>被需求的功能有哪些？問答回覆、生活對話、互動人設、品牌塑造等</li> <li>呈現在哪裡？Line@官方帳號、FaceBook粉絲團、官方帳號、IG等</li> <li>如何呈現？人物設計、品牌形象等</li> <li>被需求的知識範圍在哪？各行各業的FAQ、產品介紹、場地說明、疑難雜症等</li> <li>被需求即時更新的資料是什麼？如火車/高鐵時刻表、天氣、匯率等可即時更新的知識</li> <li>系統建置方式？雲端租賃、落地建置、租轉售等</li> </ol> <p>在第一次塑造完一隻聊天機器人成功上線後，因為受眾詢問方式的不同和網路用語更新太快，建議大概２年內需要每月或每週做一次知識範圍和理解能力的調整，２年後受眾的詢問方式大概固定及與這隻聊天機器人磨合期過後，可改為每季或每半年做一次知識範圍和理解能力的調整。</p></div>
+  <div class="post-foot"><a class="btn btn--ghost" href="../../insights/articles.html">回到專欄文章</a><a class="btn btn--ghost" href="https://ai3.cloud/article-ai3-conversationbusiness-0010/" target="_blank" rel="noopener">原文（ai3.cloud）</a></div>
+</div></article>
+<section class="section"><div class="wrap"><div class="section__head"><h2>延伸閱讀</h2><p>同分類的其他文章。</p></div><div class="post-grid"><a class="post" href="../../insights/posts/article-ai3-conversationbusiness-0009.html"><img src="../../assets/img/390v40bysqdw8hzjg5h8d850245b34sy5ggA0Atgyssqk158kj6tlx7tArqz_fedb42.jpg" alt="" loading="lazy"><div class="post__body"><time class="en">2022.01.03</time><h3>科技不斷改變零售規則｜如何運用聊天機器人開啟對話式商務</h3></div></a><a class="post" href="../../insights/posts/article-ai3-chatbotservice-0008.html"><img src="../../assets/img/768x430_63a73e.png" alt="" loading="lazy"><div class="post__body"><time class="en">2021.12.16</time><h3>智能客服是什麼？如何應用智能客服提供線上服務解決問題</h3></div></a><a class="post" href="../../insights/posts/article-ai3-conversationbusiness-0007.html"><img src="../../assets/img/1-768x431_0cf5ce.png" alt="" loading="lazy"><div class="post__body"><time class="en">2021.11.29</time><h3>對話式商務(行銷)將服務與銷售結合的最佳化-服務設計、流程</h3></div></a></div></div></section>
+<section class="section section--tight"><div class="wrap"><div class="cta"><div><h2>想讓你的客服也會說話？</h2><p>留下需求，顧問會在一個工作天內回覆，帶你評估雲端訂閱或專案客製哪一種比較適合。</p></div><div style="display:grid;gap:12px"><a class="btn btn--white btn--lg" href="../../contact/index.html">填寫諮詢表單</a><a class="btn btn--outline-white btn--lg" href="tel:+886277066101">02-7706-6101</a></div></div></div></section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--6">
+      <div class="footer__brand">
+        <a class="logo" href="../../index.html"><img src="../../assets/img/Ai3-co-cropped-logo_b06e9a.png" alt="Ai3 人工智能" width="107" height="40"></a>
+        <p>Ai3 人工智能股份有限公司。把語音、對話與知識整合成企業的 AI 服務專員。</p>
+        <div class="footer__contact"><span>115 台北市南港區重陽路 273 號 9 樓</span><a href="tel:+886277066101">02-7706-6101</a><a href="mailto:contactai3@ai3.cloud">contactai3@ai3.cloud</a><span>傳真 02-7706-6100</span></div>
+      </div>
+      <div><h4><a href="../../products/index.html">產品</a></h4><ul><li><a href="../../products/qbiai.html">QbiAI 企業客服機器人</a></li><li><a href="../../products/qbi-bot.html">Qbi Bot 智能機器人</a></li><li><a href="../../products/qbi-crm.html">Qbi CRM 智能客服系統</a></li><li><a href="../../products/cloud.html">雲端訂閱方案</a></li><li><a href="../../products/custom.html">客製化專案</a></li><li><a href="../../products/course.html">AI 智慧應用課程</a></li></ul></div><div><h4><a href="../../solutions/index.html">解決方案</a></h4><ul><li><a href="../../solutions/finance.html">金融保險</a></li><li><a href="../../solutions/public.html">公部門</a></li><li><a href="../../solutions/transport.html">交通運輸</a></li><li><a href="../../solutions/retail.html">零售、美妝與電商</a></li><li><a href="../../solutions/tech.html">製造與科技</a></li><li><a href="../../solutions/education.html">教育與其他</a></li></ul></div><div><h4><a href="../../cases/index.html">成功案例</a></h4><ul><li><a href="../../cases/index.html">所有案例</a></li></ul></div><div><h4><a href="../../about/index.html">關於 Ai3</a></h4><ul><li><a href="../../about/index.html">公司簡介</a></li><li><a href="../../about/team.html">經營團隊</a></li><li><a href="../../about/awards.html">獎項與認證</a></li><li><a href="../../about/esg.html">ESG 永續報告</a></li><li><a href="../../about/careers.html">人才招募</a></li></ul></div><div><h4><a href="../../insights/index.html">洞察</a></h4><ul><li><a href="../../insights/news.html">最新消息</a></li><li><a href="../../insights/media.html">媒體報導</a></li><li><a href="../../insights/articles.html">專欄文章</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 Ai3 人工智能股份有限公司</span><span><a href="../../privacy.html">個資暨隱私權聲明</a> · <a href="../../contact/index.html">聯絡我們</a> · <a href="https://www.104.com.tw/company/1a2x6bkz59" target="_blank" rel="noopener">104 職缺</a></span></div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/effects.js"></script>
+</body>
+</html>
