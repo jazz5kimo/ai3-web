@@ -366,7 +366,8 @@
   }
 
   /* ---------------- Hero 景深：往下捲時貴哥舞台退後、文字淡出 ---------------- */
-  if (FX.heroDepth && hasST && !reduce && $(".hero__stage")) {
+  // 手機與平板直向，貴哥和對話框疊在同一畫面，舞台不往下退，免得壓到輸入框
+  if (FX.heroDepth && hasST && !reduce && $(".hero__stage") && window.matchMedia("(min-width: 900px)").matches) {
     window.addEventListener("load", () => {
       gsap.timeline({ scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 0.6 } })
         .to(".hero__copy", { y: -90, opacity: 0.12, ease: "none" }, 0)

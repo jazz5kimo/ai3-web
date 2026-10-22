@@ -76,6 +76,8 @@
     let raf = 0;
     const check = () => {
       raf = 0; if (!ready) return;
+      const ae = document.activeElement;
+      if (ae && ae.id === "voiceInput" && !state.docked) return;   // 手機正在首頁輸入框打字（鍵盤彈出、畫面上推）時不要把貴哥收走
       const r = heroStage.getBoundingClientRect(), vh = window.innerHeight;
       if (!state.docked && r.bottom < vh * 0.42) setDocked(true);
       else if (state.docked && r.bottom > vh * 0.62) setDocked(false);

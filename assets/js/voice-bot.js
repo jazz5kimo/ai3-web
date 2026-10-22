@@ -461,7 +461,7 @@
   const GREET = cfg.greetLines || [
     ["greeting", "嗨！我是貴哥，Ai3 的 AI 服務專員。"],
     ["explaining", "我聽得懂台灣國語，會從企業的知識庫找答案，再用聲音回答你。"],
-    ["welcome", "按下麥克風直接跟我說話，或點左邊的問題，我馬上回答。"]
+    ["welcome", "按下麥克風直接跟我說話，或點" + (window.innerWidth < 900 ? "下面" : "左邊") + "的問題，我馬上回答。"]
   ];
   const CHATTER = cfg.chatterLines || [
     ["curious", "想知道 Ai3 服務過哪些客戶嗎？點「服務過哪些客戶？」問我。"],

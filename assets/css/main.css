@@ -1384,3 +1384,43 @@ body.has-gdock .totop { right: 132px; }
 }
 @media (prefers-reduced-motion: reduce) { .gdock__disc i { animation: none; opacity: 0; } }
 @media print { .gdock { display: none; } }
+
+/* ===== 手機、平板直向：貴哥和對話輸入框在同一個畫面（貴哥 → 輸入框 → 標題與說明） ===== */
+@media (max-width: 899px) {
+  .hero { padding-top: 70px; }
+  .hero__inner { display: flex; flex-direction: column; gap: 0; }
+  .hero__copy { display: contents; }
+  .hero__stage { order: 1; }
+  .hero__copy > .voice { order: 2; position: relative; z-index: 4; margin-top: -10px; }
+  .hero__kicker { order: 3; margin-top: 28px; align-self: flex-start; }
+  .hero__copy > h1 { order: 4; }
+  .hero__rotate { order: 5; }
+  .hero__lead { order: 6; }
+  .hero__more { order: 7; }
+  .stage { height: clamp(300px, calc(100svh - 300px), 540px); }
+  .figure { height: 74%; }
+  .say { width: min(94%, 400px); padding: 10px 14px 12px; }
+  .say__head { margin-bottom: 2px; }
+  .say__text { font-size: 15px; line-height: 1.55; max-height: 4.7em; }
+  .stage__label { display: none; }
+  .voice__panel { padding: 10px 10px 12px; border-radius: 22px; }
+  .voice__log { max-height: 92px; padding: 2px 2px 8px; gap: 8px; }
+  .voice__log .msg { font-size: 14px; padding: 8px 12px; }
+  .voice__row { gap: 10px; }
+  .mic { width: 50px; height: 50px; }
+  .mic svg { width: 22px; height: 22px; }
+  .voice__input { padding: 4px 4px 4px 14px; }
+  .voice__input input { font-size: 16px; }          /* 16px：iPhone 點輸入框時不會自動放大頁面 */
+  .chips { flex-wrap: nowrap; overflow-x: auto; margin: 10px -10px 0; padding: 0 10px 2px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chips .chip { flex: 0 0 auto; padding: 7px 12px; font-size: 13px; }
+}
+@media (min-width: 700px) and (max-width: 899px) {
+  .stage { height: clamp(420px, calc(100svh - 330px), 760px); }
+  .hero__copy > .voice { width: min(100%, 620px); align-self: center; }
+  .hero__kicker { align-self: center; }
+}
+@media (max-width: 699px) and (max-height: 700px) {
+  .stage { height: clamp(260px, calc(100svh - 270px), 400px); }
+  .voice__log { max-height: 64px; }
+}
