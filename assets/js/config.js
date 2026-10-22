@@ -23,7 +23,7 @@ window.AI3_CONFIG = {
 
   // 機器人人設（Demo 用）
   botName: "貴哥",
-  greeting: "你好，我是 Ai3 的 AI 服務專員。想知道我們做什麼、服務過誰、或怎麼導入，直接問我。",
+  greeting: "你好，我是貴哥。想知道 Ai3 做什麼、服務過誰、或怎麼導入，直接問我。",
 
   // 首頁特效開關（效能不夠的機器可以關掉）
   effects: { particles: true, tilt: true, headings: true, magnet: true, glow: true, confetti: true }

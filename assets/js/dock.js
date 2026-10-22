@@ -24,7 +24,7 @@
   const SAY = '<div class="say" id="say"><div class="say__head"><b>貴哥</b><button class="say__sound" id="saySound" type="button" aria-pressed="false" aria-label="開啟貴哥的聲音">' + SOUND + '<span>開聲音</span></button></div><p class="say__text" id="sayText" aria-live="polite"></p></div>';
   const ASK = ["Ai3 有哪些產品？", "服務過哪些客戶？", "導入要多久？", "怎麼聯絡你們？"];
   const PANEL = '<div class="gdock__panel" id="gdockPanel" role="dialog" aria-label="跟貴哥聊聊" aria-hidden="true">' +
-    '<div class="gdock__head"><span class="gdock__dot"></span><b>貴哥</b><small>Ai3 的 AI 服務專員</small><button class="gdock__x" type="button" aria-label="關閉對話">×</button></div>' +
+    '<div class="gdock__head"><span class="gdock__dot"></span><b>貴哥</b><small>Ai3 人工智能</small><button class="gdock__x" type="button" aria-label="關閉對話">×</button></div>' +
     '<div class="gdock__log" id="voiceLog" aria-live="polite"></div>' +
     '<div class="gdock__chips">' + ASK.map(q => '<button type="button" class="chip" data-ask="' + q + '">' + q + '</button>').join("") + '</div>' +
     '<div class="gdock__bar"><button class="gdock__mic" id="micBtn" type="button" aria-label="按一下用說的問貴哥" aria-pressed="false">' + MIC + '</button>' +
